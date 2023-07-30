@@ -1,0 +1,47 @@
+body{
+  background-image: url("img/cy.jpg");
+  background-size: auto;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: larger;
+  display: flex;
+  justify-content: center;
+}
+form{
+  align-content: center;
+  position: relative;
+  width: auto;
+  height: auto;
+  padding: 35px 50px;
+  border-radius: 10px 40px;
+  background: rgb(172, 172, 172);
+  text-align: center;
+  margin : 80px 40px;
+  justify-content: center;
+}
+input.in {
+  border-radius: 5px;
+  border-color: aliceblue;
+  height: 30px;
+  width: 200px;
+}
+button.sub{
+  background-color: grey;
+  color: white;
+  border-radius: 30px;
+  height: 30px;
+  width: 200px;
+  border-color: rgb(172, 172, 172);
+}
+button.logo{
+  background-color: rgb(172, 172, 172);
+  margin: 10px;
+  padding: 20px 20px;
+  height: 10px;
+  width: 10px;
+  background-image: url("img/gog.png");
+  background-size: cover;
+  border-radius: 50px;
+  border-color: grey;
+  border: 4px;
+}
+
