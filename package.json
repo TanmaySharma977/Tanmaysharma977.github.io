@@ -1,0 +1,8 @@
+{
+  "name": "tanmay-sharma-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website for Tanmay Sharma",
+  "scripts": {
+    "start": "npx serve ."
+  }
+}
