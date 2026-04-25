@@ -79,6 +79,50 @@
       transition: background 0.2s !important;
     }
     .nav-cta:hover { background: #4e3859 !important; color: #fff !important; }
+    /* hide toggle on desktop */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--ink2);
+  transition: 0.3s;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 64px;
+    right: 0;
+    left: 0;
+
+    flex-direction: column;
+    gap: 18px;
+
+    background: rgba(244,243,240,0.98);
+    backdrop-filter: blur(16px);
+
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+  }
 
     /* ── Hero ── */
     .hero {
@@ -547,6 +591,11 @@
     <div class="nav-logo">
       pooja.singh
     </div>
+    <div class="nav-toggle" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <ul class="nav-links">
       <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
@@ -834,6 +883,9 @@
   </footer>
 
   <script>
+      function toggleMenu() {
+    document.querySelector(".nav-links").classList.toggle("active");
+  }
     const reveals = document.querySelectorAll('.reveal');
     const obs = new IntersectionObserver(entries => {
       entries.forEach((e, i) => {
